@@ -1,0 +1,186 @@
+[
+  {
+    "id": 1,
+    "name": "book1",
+    "title": "Introduction to Python Programming",
+    "price": 29.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwYW5kJTIwYm9va3xlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 1,
+    "name": "book1",
+    "title": "Introduction to Python Programming",
+    "price": 29.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwYW5kJTIwYm9va3xlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 1,
+    "name": "book1",
+    "title": "Introduction to Python Programming",
+    "price": 29.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwYW5kJTIwYm9va3xlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 1,
+    "name": "book1",
+    "title": "Introduction to Python Programming",
+    "price": 29.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwYW5kJTIwYm9va3xlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 2,
+    "name": "book2",
+    "title": "JavaScript Basics",
+    "price": 19.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwYW5kJTIwYm9va3xlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 2,
+    "name": "book2",
+    "title": "JavaScript Basics",
+    "price": 19.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwYW5kJTIwYm9va3xlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 2,
+    "name": "book2",
+    "title": "JavaScript Basics",
+    "price": 19.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwYW5kJTIwYm9va3xlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 2,
+    "name": "book2",
+    "title": "JavaScript Basics",
+    "price": 19.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwYW5kJTIwYm9va3xlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 2,
+    "name": "book2",
+    "title": "JavaScript Basics",
+    "price": 19.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwYW5kJTIwYm9va3xlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 2,
+    "name": "book2",
+    "title": "JavaScript Basics",
+    "price": 19.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwYW5kJTIwYm9va3xlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 2,
+    "name": "book2",
+    "title": "JavaScript Basics",
+    "price": 19.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwYW5kJTIwYm9va3xlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 3,
+    "name": "book3",
+    "title": "HTML and CSS Mastery",
+    "price": 24.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwYW5kJTIwYm9va3xlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 4,
+    "name": "book4",
+    "title": "Data Structures and Algorithms",
+    "price": 34.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVjaHxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 5,
+    "name": "book5",
+    "title": "Machine Learning Essentials",
+    "price": 39.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVjaHxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 5,
+    "name": "book5",
+    "title": "Machine Learning Essentials",
+    "price": 39.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVjaHxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 5,
+    "name": "book5",
+    "title": "Machine Learning Essentials",
+    "price": 39.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVjaHxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 5,
+    "name": "book5",
+    "title": "Machine Learning Essentials",
+    "price": 39.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVjaHxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 5,
+    "name": "book5",
+    "title": "Machine Learning Essentials",
+    "price": 39.99,
+    "category": "paid",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVjaHxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 6,
+    "name": "book6",
+    "title": "Introduction to Web Development",
+    "price": 0,
+    "category": "free",
+    "image": "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 7,
+    "name": "book7",
+    "title": "The Art of Writing",
+    "price": 0,
+    "category": "free",
+    "image": "https://images.unsplash.com/photo-1511203466129-824e631920d7?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 8,
+    "name": "book8",
+    "title": "History of Ancient Civilizations",
+    "price": 0,
+    "category": "free",
+    "image": "https://images.unsplash.com/photo-1527338611623-4e242563220a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YW5jaWVudCUyMGNpdmlsaXphdGlvbnxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 9,
+    "name": "book9",
+    "title": "World Geography",
+    "price": 0,
+    "category": "free",
+    "image": "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 10,
+    "name": "book10",
+    "title": "Cooking Recipes for Beginners",
+    "price": 0,
+    "category": "free",
+    "image": "https://images.unsplash.com/photo-1514986888952-8cd320577b68?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
+]
