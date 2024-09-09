@@ -1,116 +1,130 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Login from "./Login";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
+function Signup() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-const Signup = () => {
+  const onSubmit = async (data) => {
+    const userInfo = {
+      fullname: data.fullname,
+      email: data.email,
+      password: data.password,
+    };
+    await axios
+      .post("http://localhost:4001/user/signup", userInfo)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data) {
+          toast.success("Signup Successfully");
+          navigate(from, { replace: true });
+        }
+        localStorage.setItem("Users", JSON.stringify(res.data.user));
+      })
+      .catch((err) => {
+        if (err.response) {
+          console.log(err);
+          toast.error("Error: " + err.response.data.message);
+        }
+      });
+  };
   return (
     <>
-      <section className="bg-gray-50 dark:bg-gray-900">
-        <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-          <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-            <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                Create an account
-              </h1>
-              <form className="space-y-4 md:space-y-6" action="#">
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Your email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="name@company.com"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="password"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    placeholder="••••••••"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="confirm-password"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Confirm password
-                  </label>
-                  <input
-                    type="password" // Corrected type
-                    name="confirm-password"
-                    id="confirm-password"
-                    placeholder="••••••••"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    required
-                  />
-                </div>
-                <div className="flex items-start">
-                  <div className="flex items-center h-5">
-                    <input
-                      id="terms"
-                      aria-describedby="terms"
-                      type="checkbox"
-                      className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                      required
-                    />
-                  </div>
-                  <div className="ml-3 text-sm">
-                    <label
-                      htmlFor="terms"
-                      className="font-light text-gray-500 dark:text-gray-300"
-                    >
-                      I accept the{" "}
-                      <a
-                        className="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                        href="#"
-                      >
-                        Terms and Conditions
-                      </a>
-                    </label>
-                  </div>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                >
-                  Create an account
+      <div className="flex h-screen items-center justify-center">
+        <div className=" w-[600px] ">
+          <div className="modal-box">
+            <form onSubmit={handleSubmit(onSubmit)} method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <Link
+                to="/"
+                className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              >
+                ✕
+              </Link>
+
+              <h3 className="font-bold text-lg">Signup</h3>
+              <div className="mt-4 space-y-2">
+                <span>Name</span>
+                <br />
+                <input
+                  type="text"
+                  placeholder="Enter your fullname"
+                  className="w-80 px-3 py-1 border rounded-md outline-none"
+                  {...register("fullname", { required: true })}
+                />
+                <br />
+                {errors.fullname && (
+                  <span className="text-sm text-red-500">
+                    This field is required
+                  </span>
+                )}
+              </div>
+              {/* Email */}
+              <div className="mt-4 space-y-2">
+                <span>Email</span>
+                <br />
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-80 px-3 py-1 border rounded-md outline-none"
+                  {...register("email", { required: true })}
+                />
+                <br />
+                {errors.email && (
+                  <span className="text-sm text-red-500">
+                    This field is required
+                  </span>
+                )}
+              </div>
+              {/* Password */}
+              <div className="mt-4 space-y-2">
+                <span>Password</span>
+                <br />
+                <input
+                  type="text"
+                  placeholder="Enter your password"
+                  className="w-80 px-3 py-1 border rounded-md outline-none"
+                  {...register("password", { required: true })}
+                />
+                <br />
+                {errors.password && (
+                  <span className="text-sm text-red-500">
+                    This field is required
+                  </span>
+                )}
+              </div>
+              {/* Button */}
+              <div className="flex justify-around mt-4">
+                <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
+                  Signup
                 </button>
-                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Already have an account?{" "}
-                  <Link
+                <p className="text-xl">
+                  Have account?{" "}
+                  <button
+                    className="underline text-blue-500 cursor-pointer"
                     onClick={() =>
                       document.getElementById("my_modal_3").showModal()
                     }
-                    className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
-                    Login here
-                  </Link>
-                
+                    Login
+                  </button>{" "}
                   <Login />
                 </p>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
-};
+}
 
 export default Signup;

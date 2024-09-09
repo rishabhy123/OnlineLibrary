@@ -1,19 +1,32 @@
-import Home from "./components/Home/Home";
-import Courses from "./components/Courses/Courses";
+import React from 'react';
+import Home from "./home/Home";
+import { Navigate, Route, Routes } from "react-router-dom";
+import Courses from "./courses/Courses";
 import Signup from "./components/Signup";
-import { Routes, Route } from "react-router-dom";
-const App = () => {
-  return (
-    <div className="dark:bg-slate-900 dark:text-white">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Course" element={<Courses />} />
-        <Route path="/Signup" element={<Signup />} />
-        
+import { Toaster } from "react-hot-toast";
+import { useAuth } from "./context/AuthProvider";
 
-      </Routes>
-    </div>
+function App() {
+  const [authUser, setAuthUser] = useAuth();
+  
+
+ 
+
+  return (
+    <>
+      <div className="dark:bg-slate-900 dark:text-white">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/course"
+            element={authUser ? <Courses /> : <Navigate to="/signup" />}
+          />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+        <Toaster />
+      </div>
+    </>
   );
-};
+}
 
 export default App;
