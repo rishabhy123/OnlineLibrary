@@ -17,8 +17,8 @@ app.use(cors({
 
 app.use(express.json());
 
-const PORT = 4001;
-const URI = "mongodb://127.0.0.1:27017/bookStore";
+const PORT = 4001; // Use environment variable or default to 4001
+const URI =  "mongodb+srv://rishabhy122004:rishabhPAPA@cluster0.nbogt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"; // Use environment variable or default
 
 // Connect to MongoDB
 mongoose.connect(URI)
